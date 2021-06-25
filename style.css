@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color:black;
+}
+
+
+/* øverste diven */
+.top-content{
+    height: 200px;
+    width: 100%;
+    
+       
+}
+    
+
+
+/* Logginn/oprett konto */
+.user{
+    margin:0%;
+    padding-top: 20px;
+    padding-right: 30px;
+    
+}
+/* søkemotor */
+form{
+    text-align: center;
+    margin: 0%;
+    padding-top: 160px;
+    height: 44px;
+}
+
+input{
+    height: 30px;
+    width: 200px;
+}
+
+
+#slider{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.card{
+    border: 1px solid black;
+    width: 24%;
+    text-align: center;
+    display: inline-block;
+    margin: 0px;
+    margin-top: 50px;
+    padding: 0px;
+    background-color:black;
+    height: 100%;
+    
+    
+   
+}
+
+.card img{
+    width: 320px;
+    height: 380px;
+    padding: 10px;
+
+    
+      
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("bilder/kurv2.jpg");
+  
+    min-height: 550px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
+
+  .container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+  }
+
+  .navbar{
+    list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-top: 20px;
+    display:list-item;
+    
+}
+
+.navbar li {
+	display: inline;
+    padding: 5%;
+    
+}
+    
+.navbar a {
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.3em;
+	color: white;
+} 
+
+.nav a:hover {
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.3em;
+	color: #000;
+}
+
+.wrapper{
+	position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0,0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.wrapper .input {
+    width: 185%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+.searchbtn {
+    background: #ffec00;
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+}
+
+.searchbtn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: red;
+}
+
+.title{
+    color:white;
+    background-color: black;
+    
+}
+
+
+ button{
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 7%;
+  }
+
+  .btnHandle{
+    margin-right: 680px;
+}
+  
+   button:hover{
+    background-color: #ddd;
+    color:white;
+  }
+  
+  button.active{
+    background-color: #0b0c0b;
+    color: white;
+  }
+
+  h1{
+      width: 3%;
+      position: relative;
+      top: 500px;
+      left: 90%;
+      cursor: pointer;
+      color: white;
+      
+  }
+
+  h1:before{
+      content: attr(data-count);
+      position: absolute;
+      color: red;
+      right: 16px;
+      font-size: 15px;
+      text-align: center;
+      top: -12px;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      opacity: 0;
+  }
+
+  .deleteBtn{
+      color: white;
+      background-color: red;
+  }
+
+  
+  .modal{
+      background-color:red;
+      color:black;
+      text-align: center;
+  }
+  .itemX{
+      background-color: white;
+      color: red;
+  }
+
+
+    
+
+ 
+
+
+
+  
+

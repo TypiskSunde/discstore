@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>
+
+  <script src="controller.js"></script>
+</body>
+<script>
+    const model = {
+    inputsView: '',
+    visHandlekurv: false,
+    handlekurv: '',
+    htmlForHandlekurv : 'none',
+    Totalpris: 0,
+    disker: [
+        {
+            antall: 0,            
+            pris: 299, 
+            påLager: 1,
+        },
+        {
+            antall: 0,            
+            pris: 299, 
+            påLager: 10,
+        },
+        {
+            antall: 0,            
+            pris: 299, 
+            påLager: 0,
+        },
+        {
+            antall: 0,            
+            pris: 299, 
+            påLager: 1,
+        },
+
+    ],
+
+    inputs: {
+        antall: "",
+    },
+     
+
+}
+    function show(){}
+  
+    QUnit.test('legg til ', function(assert) {
+
+            addToCartButtons(2)
+         
+            const actual = model.feilmelding;
+            const expected = 'er ikke på lager'
+            assert.equal(actual, expected);
+    });
+
+      QUnit.test('legg til/Pris ', function(assert) {
+
+        addToCartButtons(0)
+        addToCartButtons(0)
+        const actual = model.disker[0].pris * model.disker[0].antall;
+        const expected = 598
+        assert.equal(actual, expected);
+      });
+      
+        QUnit.test('endre antall ', function(assert) {
+            model.inputs.antall = 10
+            changeAmountCart(1)
+            const actual = model.disker[1].antall;
+            const expected = 10
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test('endre antall feilmelding ', function(assert) {
+            model.inputs.antall = 10
+            changeAmountCart(2)
+            const actual = model.feilmelding;
+            const expected = 'Velg mindre antall'
+            assert.equal(actual, expected);
+        });
+
+        
+
+        QUnit.test('slette funksjon', function(assert){
+            model.disker = [1, 2, 3, 4]
+            removeItem(2)
+            const actual = model.disker;
+            const expected = [1, 2, 4]
+
+            assert.deepEqual(actual, expected)
+            assert.equal(model.disker.length, 3)
+        });
+        
+
+    
+
+        
+ 
+  </script>

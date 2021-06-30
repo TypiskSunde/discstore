@@ -4,6 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     background-color:black;
+    color: white;
 }
 
 
@@ -66,6 +67,7 @@ input{
     width: 320px;
     height: 380px;
     padding: 10px;
+    border-radius: 20%;
 
     
       
@@ -246,6 +248,7 @@ input{
       color: red;
   }
 
+ 
 
     
 
@@ -253,5 +256,4 @@ input{
 
 
 
-  
 

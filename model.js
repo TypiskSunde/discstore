@@ -1,4 +1,5 @@
 const model = {
+    feilmelding: '',
     inputsView: '',
     visHandlekurv: false,
     handlekurv: '',
@@ -67,6 +68,9 @@ const model = {
 
     ],
 
+    inputs: {
+        antall: "",
+    },
      
 
-};
+}

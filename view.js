@@ -20,6 +20,10 @@ function show() {
 <button class="handlekurven" onclick="toggleHandleKurv()"><i class="fa fa-shopping-cart"></i></button>
  <div style="color: white;"> ${htmlForHandlekurv()}</div>
  <nav class="navbar">
+ <br>
+ <br>
+ <br>
+ <br>
 
          <div class="max-width">
              <ul class="menu">
@@ -33,6 +37,7 @@ function show() {
              
          </div>
  </nav>
+ 
 
 
 
@@ -78,10 +83,10 @@ function navBar() {
 }
 
 
-function addToCartButtons(index) {
-    model.disker[index].antall++ * model.disker[index].pris;
+// function addToCartButtons(index) {
+//     model.disker[index].antall++ * model.disker[index].pris;
 
-}
+// }
 function toggleHandleKurv(){
    model.visHandlekurv = !model.visHandlekurv;
 //    if(model.handlekurvModal == 'none'){
@@ -117,6 +122,7 @@ function toggleHandleKurv(){
 //     return model.handlekurv;
     
 // }
+
 function htmlForHandlekurv(){
     let html = '';
     let sum = 0;
@@ -128,20 +134,31 @@ function htmlForHandlekurv(){
             if (disk.antall != '') {
                 html += `<br>
                 Navn: ${disk.navn} <br>
-                Antall: ${disk.antall}<br>
+             
                 Pris: ${disk.pris}
                 <button class="itemX" onclick="removeItem(${i})">Slett</button>
+                <br>
+      
+               
+                
+
+                
+                <p>Antall:${disk.antall}</p>
+                <input type="number" id="changeCartAmount" oninput="model.inputs.antall = this.value" placeholder="Endre antall">
+                    <button onclick="changeAmountCart(${i})">Endre</button>
+
                 
                 `;
                 sum += disk.antall * disk.pris;
             }
-    
+            //*changeAmountCart();
+             
         }
         model.handlekurv = `${html}<br>
         sum:${sum}kr
         `;
          
-    };
+    }
     return model.handlekurv;
 }
 
